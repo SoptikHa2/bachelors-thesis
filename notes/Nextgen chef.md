@@ -40,7 +40,21 @@ https://s2e.systems/docs/Tutorials/BasicLinuxSymbex/s2e.so.html#using-s2e-so (!)
 
 setup clion for development inside the container: https://www.jetbrains.com/help/clion/remote-development-overview.html
 
+1) spin up the container (docker-compose start)
+2) attach to the container (docker ps; docker attach xxx)
+note that the container exits after you close the shell, don't do it! Pressing Ctrl+P, Ctrl+Q should detach without the container exiting.
+3) spin up ssh (sudo /etc/init.d/ssh start)
+ssh is now available at localhost:2222
+4) user:password is s2e:s2e
+5) open jetbrains gateway and let it connect to the server: s2e@localhost:2222
+6) open project at /home/s2e/s2e/source/s2e
 
 === PLUGIN DEVELOPMENT
 
 https://s2e.systems/docs/Howtos/WritingPlugins.html
+
+- s2e build
+
+=== TEST PROJECT
+
+
