@@ -1,0 +1,20 @@
+services:
+  s2e:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    stdin_open: true
+    ports:
+      -  "127.0.0.1:2222:22"
+    volumes:
+      - s2e-dev:/home/s2e/s2e/source/s2e
+      - s2e-interpreters:/home/s2e/interpreters
+      - s2e-projects:/home/s2e/s2e/projects
+    devices:
+      - /dev/kvm:/dev/kvm:rwx
+      - /dev/kmsg:/dev/kmsg:rwx
+volumes:
+  s2e-dev:
+  s2e-interpreters:
+  s2e-projects:
