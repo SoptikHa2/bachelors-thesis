@@ -5,6 +5,7 @@ services:
       dockerfile: Dockerfile
     tty: true
     stdin_open: true
+    privileged: true
     ports:
       -  "127.0.0.1:2222:22"
     volumes:

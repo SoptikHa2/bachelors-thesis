@@ -2,7 +2,7 @@ FROM debian:11
 
 # Install packages required for s2e
 RUN apt update
-RUN apt install -y sudo vim git zsh gcc python3 python3-dev python3-venv build-essential python3-pip linux-perf
+RUN apt install -y sudo vim git zsh gcc python3 python3-dev python3-venv build-essential python3-pip gfortran libbz2-dev subversion liblzma-dev libcurl4-openssl-dev git-svn
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
 # Setup s2e:s2e user
